@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import API from "../utils/API";
 import Book from "./../components/Book";
-import triton from "./../assets/images/triton.jpg";
+import image from "./../assets/images/GoogleBooks.jpg";
 
 class Books extends Component {
 
@@ -20,7 +20,7 @@ class Books extends Component {
   render() {
     return (
         <div className="books">
-            <img src={triton} alt="UCSD Triton" />
+            <img src={image} alt="Google Books" />
             {this.state.books.map(book => (
             <Book
                 key={book._id}

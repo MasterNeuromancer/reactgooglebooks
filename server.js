@@ -27,11 +27,6 @@ app.get("/api/books", (req, res) => {
 app.get("/api/books/search", (req, res) => {
   axios.get(`https://www.googleapis.com/books/v1/volumes?q=intitle:${req.body.search}`)
     .then(response => res.json(response.data))
-      // response.data.items[0].volumeInfo.title +
-      // response.data.items[0].volumeInfo.authors[0] +
-      // response.data.items[0].volumeInfo.description +
-      // response.data.items[0].volumeInfo.imageLinks.smallThumbnail +
-      // response.data.items[0].volumeInfo.infoLink))
     .catch(err => res.status(422).json(err));
 });
 

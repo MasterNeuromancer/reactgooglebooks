@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Books from "./pages/Books";
 import Add from "./pages/Add";
 import NoMatch from "./pages/NoMatch";
+import Search from "./pages/Search";
 
 class App extends Component {
 
@@ -18,10 +19,14 @@ class App extends Component {
             <li>
               <Link to="/add">Add Book</Link>
             </li>
+            <li>
+              <Link to="/books/search">Search for Book</Link>
+            </li>
           </ul>
           <Switch>
             <Route exact path="/" component={Books} />
             <Route exact path="/add" component={Add} />
+            <Route exact path="/books/search" component={Search} />
             <Route component={NoMatch} />
           </Switch>
         </Container>
