@@ -6,7 +6,7 @@ class Search extends Component {
 
   state = {
     search: "",
-    book: ""
+    book: []
   };
 
   handleInput = e => {
@@ -20,7 +20,7 @@ class Search extends Component {
     e.preventDefault();
     API
       .searchBook(this.state.search)
-      // .then(res => console.log(res))
+      .then(res => console.log(res))
       .then(res => this.setState({ book: res.data}))
       .then(console.log(this.state.book))
       .catch(err => console.log(err));
